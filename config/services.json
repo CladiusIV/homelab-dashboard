@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "machines": [
+    {
+      "id": "ubuntu-server",
+      "name": "Ubuntu Server",
+      "description": "Primary homelab host",
+      "host": "192.168.0.143",
+      "services": [
+        {
+          "id": "cockpit",
+          "name": "Cockpit",
+          "description": "Server administration",
+          "category": "administration",
+          "icon": "⚙",
+          "protocol": "https",
+          "port": 9099,
+          "url": "https://192.168.0.143:9099",
+          "access": "private",
+          "enabled": true
+        },
+        {
+          "id": "prometheus",
+          "name": "Prometheus",
+          "description": "Metrics collection",
+          "category": "monitoring",
+          "icon": "⌁",
+          "protocol": "http",
+          "port": 9090,
+          "url": null,
+          "access": "private",
+          "enabled": true
+        },
+        {
+          "id": "grafana",
+          "name": "Grafana",
+          "description": "Metrics and dashboards",
+          "category": "monitoring",
+          "icon": "◫",
+          "protocol": "http",
+          "port": 3000,
+          "url": "http://192.168.0.143:3000",
+          "access": "private",
+          "enabled": true
+        },
+        {
+          "id": "crafty",
+          "name": "Crafty Controller",
+          "description": "Minecraft server management",
+          "category": "gaming",
+          "icon": "▦",
+          "protocol": "https",
+          "port": 8443,
+          "url": "https://192.168.0.143:8443",
+          "access": "private",
+          "enabled": true
+        },
+        {
+          "id": "homarr",
+          "name": "Homarr",
+          "description": "Internal application dashboard",
+          "category": "dashboard",
+          "icon": "▤",
+          "protocol": "http",
+          "port": 7575,
+          "url": "http://192.168.0.143:7575",
+          "access": "private",
+          "enabled": true
+        },
+        {
+          "id": "radio-listener",
+          "name": "Radio",
+          "description": "Public listening interface",
+          "category": "media",
+          "icon": "◉",
+          "protocol": "http",
+          "port": 3001,
+          "url": "http://192.168.0.143:3001",
+          "internalUrl": "http://192.168.0.143:3001",
+          "access": "public",
+          "enabled": true,
+          "note": "Public URL pending; internal origin is configured for the future tunnel."
+        }
+      ]
+    },
+    {
+      "id": "ai-workstation",
+      "name": "AI Workstation",
+      "description": "Separate PC running local AI services",
+      "host": null,
+      "services": [
+        {
+          "id": "comfyui",
+          "name": "ComfyUI",
+          "description": "Local AI image and video generation",
+          "category": "ai",
+          "icon": "✧",
+          "protocol": "http",
+          "port": 8188,
+          "url": null,
+          "access": "private",
+          "enabled": true,
+          "note": "Set this machine's LAN address when ready."
+        }
+      ]
+    },
+    {
+      "id": "unassigned",
+      "name": "Other services",
+      "description": "Existing services awaiting host and URL details",
+      "host": null,
+      "services": [
+        {
+          "id": "minecraft",
+          "name": "Minecraft",
+          "description": "Game server",
+          "category": "gaming",
+          "icon": "▦",
+          "protocol": null,
+          "port": null,
+          "url": null,
+          "access": "private",
+          "enabled": true,
+          "note": "Host and connection details not configured."
+        },
+        {
+          "id": "navidrome",
+          "name": "Navidrome",
+          "description": "Music streaming",
+          "category": "media",
+          "icon": "♫",
+          "protocol": null,
+          "port": null,
+          "url": null,
+          "access": "private",
+          "enabled": true,
+          "note": "Host and URL not configured."
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "profile",
+      "name": "Professional profile",
+      "description": "Personal and professional information",
+      "url": null,
+      "enabled": true
+    },
+    {
+      "id": "radio-website",
+      "name": "Radio website",
+      "description": "Listen to the radio online",
+      "url": null,
+      "enabled": true
+    },
+    {
+      "id": "other-projects",
+      "name": "Other projects",
+      "description": "More websites and experiments",
+      "url": null,
+      "enabled": true
+    }
+  ]
+}
